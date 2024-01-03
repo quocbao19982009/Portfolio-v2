@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 92px;
+  padding: 0px 60px;
+  align-items: center;
+  gap: 88px;
+  flex-shrink: 0;
+
+  /* Primary color  */
+  background: rgba(39, 12, 21, 0.5);
+
+  backdrop-filter: blur(4px);
+
+  color: var(--text-color);
+}

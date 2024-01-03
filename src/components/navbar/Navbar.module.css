@@ -1,17 +1,104 @@
 .navbar {
+  height: 92px;
   display: flex;
   position: fixed;
   width: 100%;
-  height: 92px;
-  padding: 0px 60px;
   align-items: center;
   gap: 88px;
   flex-shrink: 0;
-
+  justify-content: space-between;
   /* Primary color  */
   background: rgba(39, 12, 21, 0.5);
-
   backdrop-filter: blur(4px);
-
   color: var(--text-color);
+  padding: 0px 1rem;
+}
+
+/* MOBLIE */
+.iconWrapper {
+  z-index: 9999;
+}
+
+.mobileMenu {
+  visibility: hidden; /* Hide the element by default*/
+  padding-top: 92px; /* Same as navbar height */
+  position: absolute;
+  background-color: var(--primary-color);
+  height: 100vh;
+  width: 70vw;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.mobileMenu.menuOpen {
+  visibility: visible;
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNavList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.mobileNavList li {
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 120% */
+}
+
+.mobileNavList li:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* Tablets and laptop screen */
+.navList {
+  display: none;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  min-width: 50%;
+}
+.navList li {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  border-bottom: 2px solid transparent;
+}
+.navList li:hover {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* For tablets */
+@media only screen and (min-width: 768px) {
+  .navList {
+    display: flex;
+  }
+
+  .iconWrapper {
+    display: none;
+  }
 }

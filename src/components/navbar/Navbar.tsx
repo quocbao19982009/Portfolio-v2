@@ -1,28 +1,32 @@
-import { Close, Menu } from "@mui/icons-material";
+import Button from "@components/button/Button";
+import { ArrowForward, Close, Menu } from "@mui/icons-material";
 import { useState } from "react";
 import { navLinks } from "../../constants";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {
   // Cái này có thể là CSS hoặc là state? Nhưng khả năng cao là CSS
-
+  // TODO: Apply functionality for menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className={classes.navbar}>
       {/* Logo */}
-      <span>Bao Nguyen</span>
+      <span className={classes.logo}>Bao Nguyen</span>
 
-      {
-        <ul className={classes.navList}>
-          {navLinks.map((link) => (
-            <li>
-              <a>{link.name}</a>
-            </li>
-          ))}
-        </ul>
-      }
-
+      <ul className={classes.navList}>
+        {navLinks.map((link) => (
+          <li>
+            <a>{link.name}</a>
+          </li>
+        ))}
+      </ul>
+      <Button
+        className={classes.resumeButton}
+        text={"My Resume"}
+        onClick={() => console.log("Download Resume")}
+        icon={<ArrowForward />}
+      />
       {
         <div className={classes.iconWrapper}>
           {isMenuOpen ? (
@@ -46,6 +50,11 @@ const Navbar = () => {
                 <a>{link.name}</a>
               </li>
             ))}
+            <Button
+              text={"My Resume"}
+              onClick={() => console.log("Download Resume")}
+              icon={<ArrowForward />}
+            />
           </ul>
         </div>
       }

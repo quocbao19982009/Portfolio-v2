@@ -4,14 +4,22 @@
   position: fixed;
   width: 100%;
   align-items: center;
-  gap: 88px;
+  /* gap: 6rem; */
   flex-shrink: 0;
   justify-content: space-between;
   /* Primary color  */
   background: rgba(39, 12, 21, 0.5);
   backdrop-filter: blur(4px);
   color: var(--text-color);
-  padding: 0px 1rem;
+  padding: 0px 2rem;
+}
+
+.logo {
+  /* flex-grow: 2; */
+}
+
+.resumeButton {
+  visibility: hidden;
 }
 
 /* MOBLIE */
@@ -25,7 +33,7 @@
   position: absolute;
   background-color: var(--primary-color);
   height: 100vh;
-  width: 70vw;
+  width: 90vw;
   top: 0;
   right: 0;
   opacity: 0;
@@ -74,8 +82,9 @@
   margin: 0;
   height: 100%;
   align-items: center;
-  min-width: 50%;
+  width: 70%;
 }
+
 .navList li {
   flex-grow: 1;
   height: 100%;
@@ -96,6 +105,10 @@
 @media only screen and (min-width: 768px) {
   .navList {
     display: flex;
+  }
+
+  .resumeButton {
+    visibility: visible;
   }
 
   .iconWrapper {

@@ -1,0 +1,8 @@
+.landingPage {
+  background: var(--primary-color);
+  postion: relative;
+}
+
+* {
+  color: white;
+}

@@ -11,6 +11,9 @@ const Navbar = () => {
 
   return (
     <div className={classes.navbar}>
+      <div
+        className={`${classes.backdrop} ${isMenuOpen ? classes.menuOpen : ""}`}
+      ></div>
       {/* Logo */}
       <span className={classes.logo}>Bao Nguyen</span>
 

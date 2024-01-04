@@ -5,4 +5,38 @@
     var(--secondary-color) 0%,
     var(--primary-color) 70%
   );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.smallFont {
+  font-weight: 400;
+}
+
+.mainText {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.highlightText {
+  color: #ff432e;
+}
+
+.shortIntroduction {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
 }

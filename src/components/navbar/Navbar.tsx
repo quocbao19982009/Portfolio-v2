@@ -9,14 +9,9 @@ const Navbar = () => {
     return (
         <nav
             className={
-                'fixed flex h-24 w-full items-center justify-between bg-nav-color px-8 py-0 backdrop-blur-sm backdrop-filter'
+                'fixed flex h-24 w-full items-center justify-between bg-nav-color px-8 py-0 backdrop-blur-sm backdrop-filter '
             }
         >
-            <div
-                className={`backdrop-blur-1 absolute left-0 top-0 h-screen w-screen backdrop-filter transition duration-500 ease-in  ${
-                    isMenuOpen ? 'bg-backdrop-color' : 'bg-transparent'
-                } md:hidden`}
-            ></div>
             {/* TODO: FIX when have a real Logo */}
             <span className="text-xl font-bold">Bao Nguyen</span>
 
@@ -52,7 +47,8 @@ const Navbar = () => {
             {
                 <div
                     className={`
-          absolute right-0 top-0 h-screen w-[80vw] bg-secondary pt-24 transition duration-500 ease-in  ${
+                    absolute
+          right-0 top-0 z-40 h-screen w-[80vw] bg-secondary pt-24 transition duration-500 ease-in  ${
               isMenuOpen
                   ? 'translate-x-0 opacity-100'
                   : 'translate-x-full opacity-0'
@@ -73,6 +69,12 @@ const Navbar = () => {
                     </ul>
                 </div>
             }
+            {/* Backdrop */}
+            <div
+                className={`backdrop-blur-1 z-1 pointer-events-none absolute left-0 top-0 h-screen w-screen backdrop-filter transition duration-500 ease-in  ${
+                    isMenuOpen ? 'bg-backdrop-color' : 'bg-transparent'
+                } md:hidden`}
+            />
         </nav>
     )
 }

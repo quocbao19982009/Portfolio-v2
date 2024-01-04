@@ -1,42 +1,42 @@
 .hero {
-  height: 100vh;
-  background: radial-gradient(
-    circle at 50% -100%,
-    var(--secondary-color) 0%,
-    var(--primary-color) 70%
-  );
+    height: 100vh;
+    background: radial-gradient(
+        circle at 50% -100%,
+        var(--secondary-color) 0%,
+        var(--primary-color) 70%
+    );
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .textContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .smallFont {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .mainText {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 .highlightText {
-  color: #ff432e;
+    color: #ff432e;
 }
 
 .shortIntroduction {
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
 }

@@ -9,6 +9,11 @@ export default {
             'backdrop-color': 'rgba(15, 5, 10, 0.9)',
             transparent: 'transparent',
         },
+        extend: {
+            backgroundImage: {
+                hero: 'radial-gradient(circle at 50% -100%, #ff432e 0%, #30101e 70%)',
+            },
+        },
     },
     plugins: ['prettier-plugin-tailwindcss'],
 }

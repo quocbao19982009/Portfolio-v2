@@ -1,15 +1,14 @@
 import SectionWrapper from '@components/SectionWrapper/SectionWrapper'
-import Button from '@components/button/Button'
 
 const Hero = () => {
     return (
-        // Need to customize hero background
+        // Background customisze
         <div
-            className={'bg-hero z-0 flex h-screen items-center justify-center'}
+            className={'z-0 flex h-screen items-center justify-center bg-hero'}
         >
             <SectionWrapper id="hero">
                 {/* These are the pattern, maybe or maybe not future */}
-                <div
+                {/* <div
                     className={
                         'flex flex-col items-center justify-center gap-4'
                     }
@@ -36,7 +35,7 @@ const Hero = () => {
                         }}
                     ></Button>
                     <a className="px-2  py-4 text-base font-bold">Contact me</a>
-                </div>
+                </div> */}
             </SectionWrapper>
         </div>
     )

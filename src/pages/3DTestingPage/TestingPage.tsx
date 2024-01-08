@@ -1,4 +1,4 @@
-import AvatarCanvas from '@components/3dCanvas/avatar/AvatarCancas'
+import AvatarCanvas from '@components/3dCanvas/avatar/AvatarCancas';
 
 const TestingPage = () => {
     return (
@@ -6,7 +6,7 @@ const TestingPage = () => {
             {' '}
             <AvatarCanvas />
         </div>
-    )
-}
+    );
+};
 
-export default TestingPage
+export default TestingPage;

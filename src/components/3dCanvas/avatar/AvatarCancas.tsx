@@ -1,23 +1,6 @@
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import * as THREE from 'three'
-import Avatar from './Avatar'
-
-const CameraLogger = () => {
-    const { camera, scene } = useThree()
-    const cameraHelper = new THREE.CameraHelper(camera)
-    scene.add(cameraHelper)
-    scene.background = new THREE.Color('grey')
-    camera.position.z = 1.5
-    camera.position.y = -1
-
-    const lookAt = new THREE.Vector3(0, 0, 1.4)
-    useFrame(() => {
-        camera.lookAt(lookAt)
-        camera.updateProjectionMatrix()
-    })
-
-    return null
-}
+import { Environment, OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import Avatar from './Avatar';
 
 const AvatarCanvas = () => {
     return (
@@ -27,33 +10,26 @@ const AvatarCanvas = () => {
 The Y axis is colored green.
 The Z axis is colored blue.*/
         // </Canvas>
-        <Canvas shadows>
-            <CameraLogger />
-            {/* <OrbitControls /> */}
-            <ambientLight />
-            <directionalLight
-                position={[-5, 5, 5]}
-                castShadow
-                shadow-mapSize={1024}
-            />
-            <group>
+        <Canvas shadows camera={{ position: [0, 2, 5], fov: 30 }}>
+            {/* <CameraLogger /> */}
+            <Environment preset="sunset" />
+            <OrbitControls />
+            {/* <ambientLight /> */}
+
+            <group position-y={-1}>
                 <Avatar />
                 {/* A box with the front color blue*/}
+
+                {/* <OrbitControls /> */}
+                <axesHelper args={[5]} />
             </group>
-            {/* <OrbitControls /> */}
-            <axesHelper
-                position={[0, 0, 0]}
-                rotation={[0, 0, 0]}
-                scale={[1, 1, 1]}
-                args={[5]}
-            />
             {/* <cameraHelper
                 position={[0, 0, 0]}
                 rotation={[0, 0, 0]}
                 scale={[1, 1, 1]}
             /> */}
         </Canvas>
-    )
-}
+    );
+};
 
-export default AvatarCanvas
+export default AvatarCanvas;

@@ -1,4 +1,5 @@
-import SectionWrapper from '@components/SectionWrapper/SectionWrapper'
+import SectionWrapper from '@components/SectionWrapper/SectionWrapper';
+import Button from '@components/button/Button';
 
 const Hero = () => {
     return (
@@ -7,8 +8,7 @@ const Hero = () => {
             className={'z-0 flex h-screen items-center justify-center bg-hero'}
         >
             <SectionWrapper id="hero">
-                {/* These are the pattern, maybe or maybe not future */}
-                {/* <div
+                <div
                     className={
                         'flex flex-col items-center justify-center gap-4'
                     }
@@ -31,14 +31,14 @@ const Hero = () => {
                         className="mt-4"
                         text={'My Resume'}
                         onClick={function (): void {
-                            throw new Error('Function not implemented.')
+                            throw new Error('Function not implemented.');
                         }}
                     ></Button>
                     <a className="px-2  py-4 text-base font-bold">Contact me</a>
-                </div> */}
+                </div>
             </SectionWrapper>
         </div>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

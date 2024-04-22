@@ -1,14 +1,12 @@
-import TestingPage from '@pages/3DTestingPage/TestingPage'
-import './App.css'
+import LandingPage from '@pages/landingPage/LandingPage';
+import './App.css';
 
 function App() {
     return (
         <>
-            {/* <LandingPage />
-             */}
-            <TestingPage />
+            <LandingPage />
         </>
-    )
+    );
 }
 
-export default App
+export default App;

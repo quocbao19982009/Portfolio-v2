@@ -1,11 +1,16 @@
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from '@/components/ui/popover';
 import AWS from '@assets/skills/amazon-web-services.svg';
 import cSharp from '@assets/skills/csharp.svg';
+import css from '@assets/skills/css.svg';
 import docker from '@assets/skills/docker.svg';
 import dotnet from '@assets/skills/dotnet.svg';
 import git from '@assets/skills/git-scm-icon.svg';
 import github from '@assets/skills/github.svg';
 import jest from '@assets/skills/jest-icon.svg';
-import mateiralUI from '@assets/skills/material-ui.svg';
 import mongoDb from '@assets/skills/mongodb-icon.svg';
 import nodejs from '@assets/skills/nodejs-icon.svg';
 import postgresSql from '@assets/skills/postgresql.svg';
@@ -13,13 +18,8 @@ import reactQuery from '@assets/skills/react-query-icon.svg';
 import react from '@assets/skills/reactjs-icon.svg';
 import redux from '@assets/skills/redux-icon.svg';
 import typescript from '@assets/skills/typescript-icon.svg';
-import { useState } from 'react';
 
 const SkillsSet = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const togglePopover = () => {
-        setIsOpen(!isOpen);
-    };
     const skillList2 = [
         {
             type: 'frontend',
@@ -28,22 +28,31 @@ const SkillsSet = () => {
                 {
                     name: 'Typescript',
                     image: typescript,
+                    popoverContent:
+                        'Typescript is must for me in every Frontend project',
                 },
                 {
                     name: 'React',
                     image: react,
+                    popoverContent: `React is my main "framework" for frontend development`,
                 },
                 {
-                    name: 'Material UI',
-                    image: mateiralUI,
+                    name: 'CSS',
+                    image: css,
+                    popoverContent:
+                        'If you know CSS, mastering other CSS frameworks is easy (eg. Tailwind, Material-UI, etc)',
                 },
                 {
                     name: 'React Query',
                     image: reactQuery,
+                    popoverContent:
+                        'React Query is becoming the standard for data fetching in React apps',
                 },
                 {
                     name: 'Redux',
                     image: redux,
+                    popoverContent:
+                        'Redux is still my favorite state management library',
                 },
             ],
         },
@@ -54,22 +63,32 @@ const SkillsSet = () => {
                 {
                     name: 'Node JS',
                     image: nodejs,
+                    popoverContent:
+                        'Node JS is easy to pick up after learning JS/TS',
                 },
                 {
                     name: 'C#',
                     image: cSharp,
+                    popoverContent:
+                        'My secondary language, which I am becoming more fond of',
                 },
                 {
                     name: '.Net',
                     image: dotnet,
+                    popoverContent:
+                        'Personally, I think .Net is becoming a great framework for backend development due to constant update and great community',
                 },
                 {
                     name: 'MongoDB',
                     image: mongoDb,
+                    popoverContent:
+                        'My go to for noSQL database, better to use with Mongoose, etc',
                 },
                 {
                     name: 'PostgreSQL',
                     image: postgresSql,
+                    popoverContent:
+                        'My go to for SQL database, better use with Prisma, EntityFrameWork, etc',
                 },
             ],
         },
@@ -80,22 +99,29 @@ const SkillsSet = () => {
                 {
                     name: 'Git',
                     image: git,
+                    popoverContent: 'A must for every developer',
                 },
                 {
                     name: 'Jest',
                     image: jest,
+                    popoverContent: 'A testing library for React/Node projects',
                 },
                 {
                     name: 'Github Action',
                     image: github,
+                    popoverContent: 'Basic CI-CD tool for small projects',
                 },
                 {
                     name: 'Docker',
                     image: docker,
+                    popoverContent:
+                        'The best containerization tool for me, at the moment',
                 },
                 {
                     name: 'Amazon Web Service',
                     image: AWS,
+                    popoverContent:
+                        'I have AWS certified cloud practitioner, although I need to learn more about AWS services',
                 },
             ],
         },
@@ -103,67 +129,33 @@ const SkillsSet = () => {
 
     return (
         <>
-            <div className="text-*xs mx-auto mt-12 flex flex-wrap gap-10 rounded-full px-4 text-center md:px-6 lg:px-8 xl:px-0">
+            <div className="text-*xs mx-auto mt-12 flex flex-wrap gap-5 rounded-full px-4 text-center md:px-6 lg:px-8 xl:px-0">
                 {skillList2.map((skill) => (
                     <div key={skill.type} className="w-full">
-                        <h3>{skill.title}</h3>
+                        <h3 className="mb-4 font-bold">{skill.title}</h3>
                         <div className="w-full">
                             <ul className="grid w-full list-none grid-cols-3 items-center justify-items-center gap-10 sm:grid-cols-4  md:grid-cols-5">
                                 {skill.tech.map((tech) => (
-                                    <li
-                                        key={tech.name}
-                                        className="flex flex-col items-center justify-center gap-2  "
-                                    >
-                                        <img
-                                            className="h-14 w-14"
-                                            src={tech.image}
-                                            alt={tech.name}
-                                        />
-                                        <p>{tech.name}</p>
-                                    </li>
+                                    <Popover>
+                                        <li key={tech.name}>
+                                            <PopoverTrigger className="flex flex-col items-center justify-center gap-2">
+                                                <img
+                                                    className="h-14 w-14"
+                                                    src={tech.image}
+                                                    alt={tech.name}
+                                                />
+                                                <p>{tech.name}</p>
+                                            </PopoverTrigger>
+                                            <PopoverContent>
+                                                {tech.popoverContent}
+                                            </PopoverContent>
+                                        </li>
+                                    </Popover>
                                 ))}
                             </ul>
                         </div>
                     </div>
                 ))}
-                <button
-                    className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600"
-                    onClick={togglePopover}
-                >
-                    Open Popover
-                </button>
-                {isOpen && (
-                    <div className="absolute left-0 top-0 z-10 mt-2 rounded-lg border border-gray-200 bg-white p-4 shadow-lg">
-                        {/* Popover title */}
-                        <div className="mb-2 flex items-center justify-between">
-                            <h2 className="text-lg font-semibold">
-                                Popover Title
-                            </h2>
-                            <button
-                                className="text-gray-500 hover:text-gray-600 focus:outline-none"
-                                onClick={togglePopover}
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    className="h-4 w-4"
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm3.879 13.293l-1.414 1.414L10 11.414l-2.464 2.293-1.414-1.414L8.586 10 6.121 7.536l1.414-1.414L10 8.586l2.464-2.464 1.414 1.414L11.414 10l2.465 2.293z"
-                                        clipRule="evenodd"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                        {/* Popover content */}
-                        <p>
-                            This is the content of the popover. You can add any
-                            HTML content here.
-                        </p>
-                    </div>
-                )}
             </div>
         </>
     );

@@ -6,7 +6,7 @@ const Hero = () => {
             className="align-center flex-start relative z-10 flex h-screen flex-col items-start justify-center gap-3"
             id="hero"
         >
-            <h1 className="md:text-md font-mono text-sm font-normal ">
+            <h1 className="md:text-md font-mono text-sm font-normal">
                 Hi, my name is
             </h1>
 

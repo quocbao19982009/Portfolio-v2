@@ -1,20 +1,24 @@
-import styles from '@styles/index'
+import styles from '@styles/index';
 
 interface SectionWrapperProps {
-    children: React.ReactNode
-    id: string
+    children: React.ReactNode;
+    id: string;
+    className?: string;
 }
 
-const SectionWrapper = ({ children, id }: SectionWrapperProps) => {
+const SectionWrapper = ({ children, id, className }: SectionWrapperProps) => {
     return (
-        // Maybe a z-index need here
-        <section className={`${styles.padding} mx-auto max-w-7xl`}>
-            <span className="hash-span" id={id}>
+        <section
+            className={`
+         ${styles.padding}
+         mx-auto max-w-7xl ${className}`}
+        >
+            <span className="absolute" id={id}>
                 &nbsp;
             </span>
             {children}
         </section>
-    )
-}
+    );
+};
 
-export default SectionWrapper
+export default SectionWrapper;

@@ -1,9 +1,9 @@
 .landingPage {
-  background: var(--primary-color);
-  postion: relative;
+    /* background: var(--primary-color); */
+    /* postion: relative; */
 }
 
 /* This properby will need to remove */
 * {
-  color: white;
+    /* color: white; */
 }

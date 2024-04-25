@@ -1,19 +1,46 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+module.exports = {
+    darkMode: ['class'],
+    content: [
+        './pages/**/*.{ts,tsx}',
+        './components/**/*.{ts,tsx}',
+        './app/**/*.{ts,tsx}',
+        './src/**/*.{ts,tsx}',
+    ],
+    prefix: '',
     theme: {
-        colors: {
-            primary: 'rgba(255, 67, 46, 1)',
-            secondary: 'rgba(48, 16, 30, 1)',
-            'nav-color': 'rgba(39, 12, 21, 0.5)',
-            'backdrop-color': 'rgba(15, 5, 10, 0.9)',
-            transparent: 'transparent',
+        container: {
+            center: true,
+            padding: '2rem',
+            screens: {
+                '2xl': '1400px',
+            },
         },
         extend: {
+            colors: {
+                primary: '#02aab0',
+                secondary: '#00cdac',
+                'backdrop-color': 'rgba(15, 5, 10, 0.7)',
+            },
             backgroundImage: {
-                hero: 'radial-gradient(circle at 50% -100%, #ff432e 0%, #30101e 70%)',
+                hero: 'linear-gradient(135deg, #02aab0, #00cdac)',
+                'nav-color': 'linear-gradient(135deg, #02aab0, #00cdac)',
+            },
+            keyframes: {
+                'accordion-down': {
+                    from: { height: '0' },
+                    to: { height: 'var(--radix-accordion-content-height)' },
+                },
+                'accordion-up': {
+                    from: { height: 'var(--radix-accordion-content-height)' },
+                    to: { height: '0' },
+                },
+            },
+            animation: {
+                'accordion-down': 'accordion-down 0.2s ease-out',
+                'accordion-up': 'accordion-up 0.2s ease-out',
             },
         },
     },
-    plugins: ['prettier-plugin-tailwindcss'],
-}
+    plugins: [require('tailwindcss-animate')],
+};

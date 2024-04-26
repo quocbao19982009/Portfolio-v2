@@ -2,6 +2,7 @@ import { type Container, type ISourceOptions } from '@tsparticles/engine';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import { useEffect, useMemo, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 
 const HeroBackground = () => {
     const [init, setInit] = useState(false);
@@ -95,15 +96,17 @@ const HeroBackground = () => {
 
     if (init) {
         return (
-            <Particles
-                id="tsparticles"
-                particlesLoaded={particlesLoaded}
-                options={options}
-            />
+            <Fade>
+                <Particles
+                    id="tsparticles"
+                    particlesLoaded={particlesLoaded}
+                    options={options}
+                />
+            </Fade>
         );
     }
 
-    return <></>;
+    return <h1></h1>;
 };
 
 export default HeroBackground;

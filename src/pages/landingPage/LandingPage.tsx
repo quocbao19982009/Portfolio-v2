@@ -8,6 +8,7 @@ import Projects from './section/projects/Projects';
 
 const LandingPage = () => (
     <>
+        <HeroBackground />
         <div className={'relative'}>
             {/* There should be a layer ò pattern like th */}
             {/* <SvgLayer /> */}
@@ -18,7 +19,6 @@ const LandingPage = () => (
             <Contact />
             <Footer />
         </div>
-        <HeroBackground />
     </>
 );
 

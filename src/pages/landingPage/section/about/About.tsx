@@ -1,3 +1,4 @@
+import resume from '@assets/Bao-Nguyen-Resume.pdf';
 import profileImg from '@assets/images/profile.jpg';
 import SectionWrapper from '@components/SectionWrapper/SectionWrapper';
 import { Fade } from 'react-awesome-reveal';
@@ -59,15 +60,16 @@ const About = () => {
                                 and NoSQL databases. And what I doesn't know
                                 now, I will learn it in the future.
                             </p>
-
-                            <button
-                                className="relative z-0 inline-block rounded-md border-2 border-white px-4 py-2 font-bold text-white transition
+                            <a href={resume}>
+                                <button
+                                    className="relative z-0 inline-block rounded-md border-2 border-white px-4 py-2 font-bold text-white transition
                                      ease-in-out before:absolute  before:bottom-0 before:left-0 before:-z-10 before:block before:h-full before:w-0 before:transition-all before:content-[''] hover:text-primary
                                      before:hover:w-full before:hover:bg-white
                                      "
-                            >
-                                My Resume
-                            </button>
+                                >
+                                    My Resume
+                                </button>
+                            </a>
                         </div>
                     </Fade>
                 </div>

@@ -27,9 +27,9 @@ const projectsList: ProjectDetail[] = [
             'A static site built with React and Tailwind CSS. The site is fully responsive, built to look clean and straight forward.',
         image: portfolio,
         technologies: ['React', 'Typescript', 'Tailwind CSS'],
-        source: 'https://github.com/quocbao19982009/Veikkaus-Simulator-V2',
+        source: 'https://github.com/quocbao19982009/Portfolio-v2',
         note: "Hey, you are already here, why don't you check out the source code?",
-        live: 'https://eurojackpot-simulator-v2.onrender.com/',
+        live: 'https://portfolio-v2-lemon-five.vercel.app/',
     },
     {
         title: 'Netflix Clone',

@@ -1,3 +1,4 @@
+import resume from '@assets/Bao-Nguyen-Resume.pdf';
 import Button from '@components/button/Button';
 import { Close, Menu } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
@@ -44,11 +45,13 @@ const Navbar = () => {
                         <a href={link.path}>{link.name}</a>
                     </li>
                 ))}
-                <Button
-                    className="text-lg font-bold text-white"
-                    text={'Resume'}
-                    onClick={() => console.log('Download Resume')}
-                />
+                <a href={resume}>
+                    <Button
+                        className="text-lg font-bold text-white"
+                        text={'Resume'}
+                        onClick={() => {}}
+                    />
+                </a>
             </ul>
 
             {
@@ -85,11 +88,13 @@ const Navbar = () => {
                                 </a>
                             </li>
                         ))}
-                        <Button
-                            text={'Resume'}
-                            className="text-lg font-bold text-white"
-                            onClick={() => console.log('Download Resume')}
-                        />
+                        <a href={resume}>
+                            <Button
+                                className="text-lg font-bold text-white"
+                                text={'Resume'}
+                                onClick={() => {}}
+                            />
+                        </a>
                     </ul>
                 </div>
             }

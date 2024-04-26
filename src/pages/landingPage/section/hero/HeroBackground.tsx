@@ -96,7 +96,7 @@ const HeroBackground = () => {
 
     if (init) {
         return (
-            <Fade>
+            <Fade triggerOnce>
                 <Particles
                     id="tsparticles"
                     particlesLoaded={particlesLoaded}

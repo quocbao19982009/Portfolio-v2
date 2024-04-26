@@ -1,3 +1,4 @@
+import Footer from '@/components/footer/Footer';
 import Navbar from '@components/navbar/Navbar';
 import About from './section/about/About';
 import Contact from './section/contact/Contact';
@@ -15,6 +16,7 @@ const LandingPage = () => (
             <About />
             <Projects />
             <Contact />
+            <Footer />
         </div>
         <HeroBackground />
     </>

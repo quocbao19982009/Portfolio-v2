@@ -136,8 +136,8 @@ const SkillsSet = () => {
                         <div className="w-full">
                             <ul className="grid w-full list-none grid-cols-3 items-center justify-items-center gap-10 sm:grid-cols-4  md:grid-cols-5">
                                 {skill.tech.map((tech) => (
-                                    <Popover>
-                                        <li key={tech.name}>
+                                    <Popover key={tech.name}>
+                                        <li>
                                             <PopoverTrigger className="flex flex-col items-center justify-center gap-2">
                                                 <img
                                                     className="h-14 w-14"

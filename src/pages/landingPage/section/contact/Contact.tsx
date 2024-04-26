@@ -1,5 +1,6 @@
 import SectionWrapper from '@/components/SectionWrapper/SectionWrapper';
-import Reveal from 'react-awesome-reveal';
+import { Mail } from '@mui/icons-material';
+import { Fade } from 'react-awesome-reveal';
 
 const Contact = () => {
     return (
@@ -8,8 +9,8 @@ const Contact = () => {
                 <h2 className="mb-4 text-center text-4xl font-bold">
                     Get In Touch
                 </h2>
-                <Reveal triggerOnce delay={800}>
-                    <div className="flex flex-col gap-3 text-center">
+                <Fade triggerOnce delay={800} cascade direction={'down'}>
+                    <div className="flex  flex-col items-center justify-center gap-3 text-center">
                         <p>
                             Let's me buy you a cup of coffee. I'm always happy
                             to meet and work with new people. Hit me up if you
@@ -21,23 +22,23 @@ const Contact = () => {
                                 className="contact-wrapper__text"
                                 href="mailto:quocbao19982009@gmail.com"
                             >
-                                <i className="fas fa-envelope-square"></i>{' '}
+                                <Mail className="mr-3" />
                                 baonguyendev98@gmail.com
                             </a>
                         </p>
                         <a
                             rel="noreferrer"
                             target="_blank"
-                            className="hover:text-primary relative z-0 inline-block rounded-md border-2 border-white px-4 py-2 font-bold text-white
-                            transition ease-in-out  before:absolute before:bottom-0 before:left-0 before:-z-10 before:block before:h-full before:w-0 before:transition-all before:content-['']
+                            className="relative z-0 inline-block  rounded-md border-2 border-white px-4 py-2 font-bold text-white transition
+                            ease-in-out before:absolute  before:bottom-0 before:left-0 before:-z-10 before:block before:h-full before:w-0 before:transition-all before:content-[''] hover:text-primary
                             before:hover:w-full before:hover:bg-white
                     "
                             href="mailto:baonguyendev98@gmail.com"
                         >
-                            Say Hello
+                            <span>Say Hello</span>
                         </a>
                     </div>
-                </Reveal>
+                </Fade>
             </SectionWrapper>
         </div>
     );

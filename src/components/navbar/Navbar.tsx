@@ -1,40 +1,58 @@
 import Button from '@components/button/Button';
 import { Close, Menu } from '@mui/icons-material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navLinks } from '../../constants';
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // TODO: Is Logo needed?
+    // TODO: Update the Resume
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            const isVisible =
+                prevScrollPos > currentScrollPos || currentScrollPos < 10;
+
+            setPrevScrollPos(currentScrollPos);
+            setVisible(isVisible);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollPos]);
     return (
         <nav
-            className={
-                'text-white fixed z-50 flex h-24 w-full items-center justify-end bg-nav-color px-8 py-0 backdrop-blur-sm backdrop-filter'
-            }
+            className={`fixed z-50 flex h-24 w-full items-center justify-end bg-nav-color px-8 py-0 text-white backdrop-blur-sm backdrop-filter transition-all duration-300  ${
+                visible ? 'top-0' : '-top-full'
+            }`}
         >
-            {/* TODO: FIX when have a real Logo */}
-            {/* <span className="text-xl font-bold">Bao Nguyen</span> */}
-
             <ul
                 className={`flex-2 hidden h-full items-center justify-center gap-10 md:flex`}
             >
                 {navLinks.map((link) => (
                     <li
-                        className=" flex h-full flex-1 cursor-pointer items-center justify-center rounded-sm  border-b-4 border-transparent border-opacity-0 text-lg font-bold hover:border-b-4 hover:border-primary"
+                        className=" flex h-full flex-1 cursor-pointer  items-center justify-center  rounded-sm border-b-4 border-transparent border-opacity-0 text-lg font-bold hover:border-b-4 hover:border-primary"
                         key={link.name}
                     >
-                        <a>{link.name}</a>
+                        <a href={link.path}>{link.name}</a>
                     </li>
                 ))}
                 <Button
-                    className="hidden md:flex"
+                    className="text-lg font-bold text-white"
                     text={'Resume'}
                     onClick={() => console.log('Download Resume')}
                 />
             </ul>
 
             {
-                <div className={'z-50 md:hidden'}>
+                <div className={'z-50 cursor-pointer md:hidden'}>
                     {isMenuOpen ? (
                         <Close onClick={() => setIsMenuOpen(false)} />
                     ) : (
@@ -56,15 +74,20 @@ const Navbar = () => {
                     <ul className={`flex flex-col justify-center gap-10 p-10`}>
                         {navLinks.map((link) => (
                             <li
-                                className="text-white cursor-pointer text-center text-xl font-bold "
+                                className="cursor-pointer text-center text-xl font-bold text-white "
                                 key={link.name}
                             >
-                                <a>{link.name}</a>
+                                <a
+                                    href={link.path}
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {link.name}
+                                </a>
                             </li>
                         ))}
                         <Button
                             text={'Resume'}
-                            className="text-white text-lg font-bold"
+                            className="text-lg font-bold text-white"
                             onClick={() => console.log('Download Resume')}
                         />
                     </ul>

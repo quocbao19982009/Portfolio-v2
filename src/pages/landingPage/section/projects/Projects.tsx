@@ -9,7 +9,10 @@ const Projects = () => {
             <div className="flex flex-col gap-3">
                 {' '}
                 {projectsList.map((projectInfo) => (
-                    <ProjectDetails project={projectInfo} />
+                    <ProjectDetails
+                        key={projectInfo.title}
+                        project={projectInfo}
+                    />
                 ))}
             </div>
         </SectionWrapper>

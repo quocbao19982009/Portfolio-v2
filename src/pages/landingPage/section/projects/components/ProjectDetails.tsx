@@ -13,7 +13,13 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         <div className="flex flex-wrap items-center">
             <div className=" w-full lg:w-2/5">
                 <div className="">
-                    <Reveal triggerOnce key="info" delay={1000} duration={500}>
+                    <Reveal
+                        cascade={true}
+                        triggerOnce
+                        key="info"
+                        delay={1000}
+                        duration={500}
+                    >
                         <h3 className="mb-3 text-lg font-bold">{title}</h3>
                         <div>
                             <p className="mb-4">{description}</p>
@@ -26,8 +32,8 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                             <a
                                 rel="noreferrer"
                                 target="_blank"
-                                className="border-primary  text-primary after:bg-hero relative inline-block rounded-md border-2 px-4 py-2 font-bold transition ease-in-out
-                            after:absolute after:bottom-0  after:left-0 after:-z-10 after:block after:h-full after:w-0 after:transition-all after:content-[''] hover:text-white after:hover:w-full
+                                className="relative  inline-block rounded-md border-2 border-primary px-4 py-2 font-bold text-primary transition ease-in-out after:absolute
+                            after:bottom-0 after:left-0  after:-z-10 after:block after:h-full after:w-0 after:bg-hero after:transition-all after:content-[''] hover:text-white after:hover:w-full
                             "
                                 href={live}
                             >
@@ -36,7 +42,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                             <a
                                 rel="noreferrer"
                                 target="_blank"
-                                className="text-primary flex items-center font-bold"
+                                className="flex items-center font-bold text-primary"
                                 href={source}
                             >
                                 Source Code

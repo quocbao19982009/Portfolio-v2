@@ -1,6 +1,6 @@
+import SectionWrapper from '@/components/sectionWrapper/SectionWrapper';
 import resume from '@assets/Bao-Nguyen-Resume.pdf';
 import profileImg from '@assets/images/profile.jpg';
-import SectionWrapper from '@components/SectionWrapper/SectionWrapper';
 import { Fade } from 'react-awesome-reveal';
 import SkillsSet from './components/SkillList';
 
@@ -10,7 +10,7 @@ const About = () => {
         <div className="bg-hero ">
             <SectionWrapper id="about" className="text-white">
                 <h2 className="mb-10 text-center text-4xl font-bold">
-                    ABOUT ME
+                    About Me
                 </h2>
                 <div className=" flex flex-wrap">
                     <Fade

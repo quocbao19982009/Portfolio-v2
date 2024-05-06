@@ -1,9 +1,9 @@
+import SectionWrapper from '@/components/sectionWrapper/SectionWrapper';
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
 } from '@/components/ui/popover';
-import SectionWrapper from '@components/SectionWrapper/SectionWrapper';
 import { Fade } from 'react-awesome-reveal';
 
 const Hero = () => {
@@ -31,8 +31,8 @@ const Hero = () => {
                     I'm a{' '}
                     <span>
                         <Popover key="test">
-                            <PopoverTrigger>
-                                <span className="italic text-primary">
+                            <PopoverTrigger className="relative">
+                                <span className=" scale-x-0 transform italic text-primary transition-transform duration-300 ease-in-out before:absolute before:bottom-0 before:left-0 before:-z-10 before:block  before:h-1 before:w-full  before:origin-right before:scale-x-0 before:transition-all before:content-[''] before:hover:w-full hover:before:origin-left hover:before:scale-x-100 before:hover:border-b-2 before:hover:border-primary">
                                     honest
                                 </span>
                             </PopoverTrigger>
@@ -62,7 +62,7 @@ const Hero = () => {
                     after:bottom-0 after:left-0  after:-z-10 after:block after:h-full after:w-0 after:bg-hero after:transition-all after:content-[''] hover:text-white after:hover:w-full
                     "
                 >
-                    Know more
+                    <a href="#about">Know More</a>
                 </button>
             </Fade>
         </SectionWrapper>

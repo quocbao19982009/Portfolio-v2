@@ -1,4 +1,4 @@
-import SectionWrapper from '@/components/SectionWrapper/SectionWrapper';
+import SectionWrapper from '@/components/sectionWrapper/SectionWrapper';
 import { Mail } from '@mui/icons-material';
 import { Fade } from 'react-awesome-reveal';
 

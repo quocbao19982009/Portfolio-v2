@@ -140,7 +140,7 @@ const SkillsSet = () => {
                                         <li>
                                             <PopoverTrigger className="flex flex-col items-center justify-center gap-2">
                                                 <img
-                                                    className="h-14 w-14"
+                                                    className="h-14 w-14 transform transition-transform duration-500 hover:scale-125"
                                                     src={tech.image}
                                                     alt={tech.name}
                                                 />

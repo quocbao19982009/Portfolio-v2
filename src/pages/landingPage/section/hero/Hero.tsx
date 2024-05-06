@@ -1,4 +1,4 @@
-import SectionWrapper from '@/components/sectionWrapper/SectionWrapper';
+import SectionWrapper from '@/components/SectionWrapper/SectionWrapper';
 import {
     Popover,
     PopoverContent,

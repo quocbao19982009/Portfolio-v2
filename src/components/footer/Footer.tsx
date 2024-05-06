@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import SectionWrapper from '../sectionWrapper/SectionWrapper';
+import SectionWrapper from '../SectionWrapper/SectionWrapper';
 const Footer = () => {
     const year = new Date().getFullYear();
     return (

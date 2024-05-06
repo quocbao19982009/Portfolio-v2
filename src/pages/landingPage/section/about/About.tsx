@@ -1,4 +1,4 @@
-import SectionWrapper from '@/components/sectionWrapper/SectionWrapper';
+import SectionWrapper from '@/components/SectionWrapper/SectionWrapper';
 import resume from '@assets/Bao-Nguyen-Resume.pdf';
 import profileImg from '@assets/images/profile.jpg';
 import { Fade } from 'react-awesome-reveal';

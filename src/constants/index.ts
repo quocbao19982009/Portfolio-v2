@@ -9,7 +9,6 @@ export const navLinks = [
     { name: 'Contact', path: '#contact' },
 ];
 
-// TODO: Update the projects
 const projectsList: ProjectDetail[] = [
     {
         title: 'Veikkaus Simulator',
@@ -29,7 +28,7 @@ const projectsList: ProjectDetail[] = [
         technologies: ['React', 'Typescript', 'Tailwind CSS'],
         source: 'https://github.com/quocbao19982009/Portfolio-v2',
         note: "Hey, you are already here, why don't you check out the source code?",
-        live: 'https://portfolio-v2-lemon-five.vercel.app/',
+        live: 'https://baonguyendev.com/',
     },
     {
         title: 'Netflix Clone',

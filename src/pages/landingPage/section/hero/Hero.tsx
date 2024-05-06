@@ -20,14 +20,14 @@ const Hero = () => {
                 direction={animationCondition ? 'left' : 'down'}
                 triggerOnce
             >
-                <h1 className="font-mono text-sm font-normal md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
+                <p className="font-mono text-sm font-normal md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
                     Hi, my name is
-                </h1>
+                </p>
 
-                <h2 className="m-0 text-4xl font-semibold leading-tight text-secondary md:text-4xl lg:text-7xl">
+                <p className="m-0 text-4xl font-semibold  text-secondary md:text-4xl lg:text-7xl">
                     Bao Nguyen.
-                </h2>
-                <p className="m-0 text-3xl font-semibold leading-tight md:text-3xl lg:text-4xl xl:text-5xl">
+                </p>
+                <p className="m-0 text-3xl font-semibold  md:text-3xl lg:text-4xl xl:text-5xl">
                     I'm a{' '}
                     <span>
                         <Popover key="test">

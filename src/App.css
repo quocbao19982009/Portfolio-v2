@@ -5,13 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Create varibles */
-:root {
-    /* --primary-color: #30101e; */
-    /* --secondary-color: #ff432e; */
-    /* --text-color: #fff; */
-}
-
 * {
     margin: 0;
     padding: 0;

@@ -62,7 +62,7 @@ const About = () => {
                             </p>
                             <a href={resume}>
                                 <button
-                                    className="relative z-0 inline-block rounded-md border-2 border-white px-4 py-2 font-bold text-white transition
+                                    className="relative z-0 mt-2 inline-block rounded-md border-2 border-white px-4 py-2 font-bold text-white transition
                                      ease-in-out before:absolute  before:bottom-0 before:left-0 before:-z-10 before:block before:h-full before:w-0 before:transition-all before:content-[''] hover:text-primary
                                      before:hover:w-full before:hover:bg-white
                                      "

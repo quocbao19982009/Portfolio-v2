@@ -120,8 +120,7 @@ const SkillsSet = () => {
                 {
                     name: 'Amazon Web Service',
                     image: AWS,
-                    popoverContent:
-                        'I have AWS certified cloud practitioner, although I need to learn more about AWS services',
+                    popoverContent: 'I have AWS Certified Cloud Developer',
                 },
             ],
         },

@@ -1,6 +1,6 @@
 import { ProjectDetail } from '@/interfaces/projectDetail.interfaces';
-import netflix from '@assets/projects/netflix.png';
 import portfolio from '@assets/projects/portfolio.png';
+import todo from '@assets/projects/Todo.png';
 import veikkausSimulator from '@assets/projects/veikkaus-simulator.png';
 
 export const navLinks = [
@@ -9,7 +9,7 @@ export const navLinks = [
     { name: 'Contact', path: '#contact' },
 ];
 
-const projectsList: ProjectDetail[] = [
+export const projectsList: ProjectDetail[] = [
     {
         title: 'Veikkaus Simulator',
         description:
@@ -31,15 +31,56 @@ const projectsList: ProjectDetail[] = [
         live: 'https://baonguyendev.com/',
     },
     {
-        title: 'Netflix Clone',
-        description:
-            'A simple Netflix clone using React and API from The Movie Database (TMDB) where users can see movie info.',
-        image: netflix,
-        source: 'https://github.com/quocbao19982009/Netflix-Clone',
-        note: "Who doesn't try to clone Netflix at least once in their life?",
-        live: 'https://netflix-clone-cec3f.firebaseapp.com/',
-        technologies: ['React', 'CSS Module', 'Axios', 'React Hook'],
+        title: 'Todo App',
+        description: 'Every one has a todo app. This is mine.',
+        image: todo,
+        source: 'https://github.com/quocbao19982009/Todo-App?tab=readme-ov-file',
+        note: "This is a todo app, but it's my first project with React. So it's special to me. Also, my most star projects on Github.",
+        live: 'https://todo-app-16d97.web.app/',
+        technologies: ['React', 'Firebase', 'CRUD'],
     },
 ];
 
-export default projectsList;
+export const experienceList: Experience[] = [
+    {
+        title: 'Full Stack Web Developer',
+        company: 'Insta Group Oy',
+        companyLink: 'https://www.insta.fi/fi/',
+        startDate: 'AUG 2022',
+        endDate: 'Present',
+        description:
+            "Developed and maintained a industrial software for Konecranes Oyj. The software is used to manage and monitor the industrial equipment. I'm responsible for the front-end and back-end development.",
+        technologies: ['React', 'Typescript', 'SQL', '.NET', 'AWS'],
+    },
+    {
+        title: 'Intern Software Developer',
+        company: 'Intergrify',
+        companyLink: 'https://www.integrify.io/',
+        startDate: 'JAN 2022',
+        endDate: 'JUNE 2022',
+        description:
+            'Study and work as a software developer. I have learned and worked with many technologies such as React, NodeJS, Express, MongoDB, Docker, etc. I have also worked with many projects, from small to big, from front-end to back-end.',
+        technologies: ['React', 'Docker', 'NodeJS', 'Express', 'MongoDB'],
+    },
+    {
+        title: 'Frontend Developer',
+        company: 'Self-taught',
+        companyLink:
+            'https://www.linkedin.com/posts/bao-nguyen-dev_webdevelopment-job-coding-activity-6938854018999853056-bn4f?utm_source=share&utm_medium=member_desktop',
+        startDate: '2021',
+        endDate: '2022',
+        description:
+            'I had a detailed plan on which technologies I will learn and an estimated time for how long it will take me to master them. At that time, I had a part-time job so I learned in the morning and did web dev stuff in the evening. The main methods of my study are Udemy Courses, Youtube videos, and doing hands-on projects. Like everyone else, I get started with HTML, CSS, JavaScript, and ReactJS. After a certain point, I realized that I needed more than just those basic skills to become a competent Frontend Developer. I started to dig into other Frontend technologies such as TypeScript, Next JS, and SASS. Slowly, I picked up interests in Backend and DevOps, so I studied Node JS, Docker, AWS, and Github Action. ',
+        technologies: ['HTML', 'Javascript', 'CSS'],
+    },
+    {
+        title: 'Environmental and Engineering Student',
+        company: 'Tampere University of Applied Sciences (TAMK)',
+        companyLink: 'https://www.tuni.fi/en',
+        startDate: '2016',
+        endDate: '2021',
+        description:
+            'I studied Environmental Engineering at Tampere University of Applied Sciences. I learned a lot about the environment, how to protect it, and how to make the world a better place. I also learned a lot about engineering, how to solve problems, and how to make things work.',
+        technologies: ['Engineer', 'Environmental', 'Logic', 'Laboratory'],
+    },
+];

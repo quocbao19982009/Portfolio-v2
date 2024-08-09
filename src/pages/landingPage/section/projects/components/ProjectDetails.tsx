@@ -1,3 +1,4 @@
+import SkillBadgeList from '@/components/skillBadgeList/SkillBadgeList';
 import { ProjectDetail } from '@/interfaces/projectDetail.interfaces';
 import Reveal from 'react-awesome-reveal';
 import Tilt from 'react-parallax-tilt';
@@ -25,24 +26,27 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                             <p className="mb-4">{description}</p>
                             <p className="mb-4">{note}</p>
                             <p className="mb-4 font-bold">
-                                {technologies.map((tech) => '#' + tech + ' ')}
+                                <SkillBadgeList
+                                    variant="secondary"
+                                    skills={technologies}
+                                />
                             </p>
                         </div>
                         <div className="items-cen flex gap-3 ">
-                            <a
-                                rel="noreferrer"
-                                target="_blank"
-                                className="relative  inline-block rounded-md border-2 border-primary px-4 py-2 font-bold text-primary transition ease-in-out after:absolute
-                            after:bottom-0 after:left-0  after:-z-10 after:block after:h-full after:w-0 after:bg-hero after:transition-all after:content-[''] hover:text-white after:hover:w-full
-                            "
-                                href={live}
-                            >
-                                See Live
+                            <a rel="noreferrer" target="_blank" href={live}>
+                                <button
+                                    className="relative z-0 mt-2 inline-block rounded-md border-2 border-white px-4 py-2 font-bold text-white transition
+                                     ease-in-out before:absolute  before:bottom-0 before:left-0 before:-z-10 before:block before:h-full before:w-0 before:transition-all before:content-[''] hover:text-primary
+                                     before:hover:w-full before:hover:bg-white
+                                     "
+                                >
+                                    See Live
+                                </button>
                             </a>
                             <a
                                 rel="noreferrer"
                                 target="_blank"
-                                className="flex items-center font-bold text-primary"
+                                className="mt-2 flex items-center px-4  py-2 font-bold text-white"
                                 href={source}
                             >
                                 Source Code

@@ -11,7 +11,7 @@ const SkillBadgeList = ({
     return (
         <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
             {skills.map((skill) => (
-                <li className="mr-1.5 mt-2">
+                <li key={skill} className="mr-1.5 mt-2">
                     <div
                         className={`flex items-center rounded-full ${
                             isSecondary ? 'bg-teal-100/30' : 'bg-teal-300/10'

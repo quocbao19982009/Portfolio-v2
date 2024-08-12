@@ -10,9 +10,7 @@ import Projects from './section/projects/Projects';
 const LandingPage = () => (
     <>
         <HeroBackground />
-        <div className={'relative'}>
-            {/* There should be a layer ò pattern like th */}
-            {/* <SvgLayer /> */}
+        <div className={'relative z-50'}>
             <Navbar />
             <Hero />
             <About />

@@ -26,12 +26,12 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                         <div>
                             <p className="mb-4">{description}</p>
                             <p className="mb-4">{note}</p>
-                            <p className="mb-4 font-bold">
+                            <div className="mb-4 font-bold">
                                 <SkillBadgeList
                                     variant="secondary"
                                     skills={technologies}
                                 />
-                            </p>
+                            </div>
                         </div>
                         <div className="items-cen flex gap-3 ">
                             <ButtonLink

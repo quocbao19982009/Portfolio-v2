@@ -9,7 +9,7 @@ const ExperienceDetail = ({ experience }: ExperienceDetailProps) => {
         <li className="mb-12">
             <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <header
-                    className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+                    className="z-10 mb-2 mt-1 text-sm font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
                     aria-label="2024 to Present"
                 >
                     {experience.startDate} — {experience.endDate}
@@ -37,9 +37,9 @@ const ExperienceDetail = ({ experience }: ExperienceDetailProps) => {
                                             aria-hidden="true"
                                         >
                                             <path
-                                                fill-rule="evenodd"
+                                                fillRule="evenodd"
                                                 d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                                clip-rule="evenodd"
+                                                clipRule="evenodd"
                                             ></path>
                                         </svg>
                                     </span>
@@ -47,9 +47,9 @@ const ExperienceDetail = ({ experience }: ExperienceDetailProps) => {
                             </a>
                         </div>
                     </h3>
-                    <p className="mt-2 text-sm leading-normal">
+                    <div className="mt-2 text-sm leading-normal">
                         {experience.description}
-                    </p>
+                    </div>
                     <SkillBadgeList skills={experience.technologies} />
                 </div>
             </div>

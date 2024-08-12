@@ -11,15 +11,12 @@ const Experience = () => {
                 <ol>
                     {experienceList.map((experience, index) => (
                         <Fade
+                            key={index}
                             triggerOnce
-                            key="image"
                             direction="right"
                             delay={200}
                         >
-                            <ExperienceDetail
-                                key={index}
-                                experience={experience}
-                            />
+                            <ExperienceDetail experience={experience} />
                         </Fade>
                     ))}
                 </ol>

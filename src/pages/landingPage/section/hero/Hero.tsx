@@ -1,4 +1,5 @@
 import SectionWrapper from '@/components/SectionWrapper/SectionWrapper';
+import ButtonLink from '@/components/button/ButtonLink';
 import {
     Popover,
     PopoverContent,
@@ -57,13 +58,7 @@ const Hero = () => {
                 </p>
             </Fade>
             <Fade delay={1000} direction="left" triggerOnce>
-                <button
-                    className="relative  inline-block rounded-md border-2 border-primary px-4 py-2 font-bold text-primary transition ease-in-out after:absolute
-                    after:bottom-0 after:left-0  after:-z-10 after:block after:h-full after:w-0 after:bg-hero after:transition-all after:content-[''] hover:text-white after:hover:w-full
-                    "
-                >
-                    <a href="#about">Know More</a>
-                </button>
+                <ButtonLink href={'#about'} text="Know More" />
             </Fade>
         </SectionWrapper>
     );

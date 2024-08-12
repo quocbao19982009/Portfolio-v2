@@ -1,4 +1,5 @@
 import SectionWrapper from '@/components/SectionWrapper/SectionWrapper';
+import ButtonLink from '@/components/button/ButtonLink';
 import { Mail } from '@mui/icons-material';
 import { Fade } from 'react-awesome-reveal';
 
@@ -19,22 +20,16 @@ const Contact = () => {
                     <p>
                         <a
                             className="contact-wrapper__text"
-                            href="mailto:quocbao19982009@gmail.com"
+                            href="mailto:baonguyendev98@gmail.com"
                         >
                             <Mail className="mr-3" />
                             baonguyendev98@gmail.com
                         </a>
                     </p>
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        className="relative  inline-block rounded-md border-2 border-primary px-4 py-2 font-bold text-primary transition ease-in-out after:absolute
-                        after:bottom-0 after:left-0  after:-z-10 after:block after:h-full after:w-0 after:bg-hero after:transition-all after:content-[''] hover:text-white after:hover:w-full
-                        "
-                        href="mailto:baonguyendev98@gmail.com"
-                    >
-                        <span>Say Hello</span>
-                    </a>
+                    <ButtonLink
+                        text="Say Hello on LinkedIn"
+                        href="https://www.linkedin.com/in/bao-nguyen-dev/"
+                    />
                 </div>
             </Fade>
         </SectionWrapper>

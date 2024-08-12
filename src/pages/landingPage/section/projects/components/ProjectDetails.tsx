@@ -1,3 +1,4 @@
+import ButtonLink from '@/components/button/ButtonLink';
 import SkillBadgeList from '@/components/skillBadgeList/SkillBadgeList';
 import { ProjectDetail } from '@/interfaces/projectDetail.interfaces';
 import Reveal from 'react-awesome-reveal';
@@ -33,24 +34,26 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                             </p>
                         </div>
                         <div className="items-cen flex gap-3 ">
-                            <a rel="noreferrer" target="_blank" href={live}>
-                                <button
-                                    className="relative z-0 mt-2 inline-block rounded-md border-2 border-white px-4 py-2 font-bold text-white transition
-                                     ease-in-out before:absolute  before:bottom-0 before:left-0 before:-z-10 before:block before:h-full before:w-0 before:transition-all before:content-[''] hover:text-primary
-                                     before:hover:w-full before:hover:bg-white
-                                     "
-                                >
-                                    See Live
-                                </button>
-                            </a>
-                            <a
+                            <ButtonLink
+                                text="See Live"
+                                href={live}
+                                variant="secondary"
+                            />
+                            <ButtonLink
+                                text="Source Code"
+                                href={source}
+                                variant="secondary"
+                                contained={false}
+                                className=""
+                            />
+                            {/* <a
                                 rel="noreferrer"
                                 target="_blank"
                                 className="mt-2 flex items-center px-4  py-2 font-bold text-white"
                                 href={source}
                             >
                                 Source Code
-                            </a>
+                            </a> */}
                         </div>
                     </Reveal>
                 </div>

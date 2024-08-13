@@ -9,6 +9,7 @@ import Projects from './section/projects/Projects';
 
 const LandingPage = () => (
     <>
+        <div id="backdrop" />
         <HeroBackground />
         <div className={'relative z-50'}>
             <Navbar />

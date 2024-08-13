@@ -141,7 +141,7 @@ const SkillsSet = () => {
                                                 <img
                                                     className="h-14 w-14 transform transition-transform duration-500 hover:scale-125"
                                                     src={tech.image}
-                                                    alt={tech.name}
+                                                    alt={tech.name + ' Icon'}
                                                 />
                                                 <p>{tech.name}</p>
                                             </PopoverTrigger>

@@ -49,7 +49,7 @@ export const experienceList: Experience[] = [
         startDate: 'AUG 2022',
         endDate: 'Present',
         description:
-            "Developed and maintained a industrial software for Konecranes Oyj. The software is used to manage and monitor the industrial equipment. I'm responsible for the front-end and back-end development.",
+            'Developed and maintained industrial software for a client, used to manage and monitor crane equipment at London port sites. I was responsible for both front-end and back-end development. Additional responsibilities included maintaining the software and adding new features.',
         technologies: ['React', 'Typescript', 'SQL', '.NET', 'AWS'],
     },
     {
@@ -59,7 +59,7 @@ export const experienceList: Experience[] = [
         startDate: 'JAN 2022',
         endDate: 'JUNE 2022',
         description:
-            'Study and work as a software developer. I have learned and worked with many technologies such as React, NodeJS, Express, MongoDB, Docker, etc. I have also worked with many projects, from small to big, from front-end to back-end.',
+            'Studied and worked as a software developer, gaining experience with technologies such as React, NodeJS, Express, MongoDB, and Docker. I contributed to various projects, ranging from small to large, and worked on both front-end and back-end development.',
         technologies: ['React', 'Docker', 'NodeJS', 'Express', 'MongoDB'],
     },
     {
@@ -80,7 +80,7 @@ export const experienceList: Experience[] = [
         startDate: '2016',
         endDate: '2021',
         description:
-            'I studied Environmental Engineering at Tampere University of Applied Sciences. I learned a lot about the environment, how to protect it, and how to make the world a better place. I also learned a lot about engineering, how to solve problems, and how to make things work.',
+            'I studied Environmental Engineering at Tampere University of Applied Sciences, where I gained extensive knowledge about environmental protection and sustainability. I also developed strong engineering skills, learning how to solve complex problems and implement effective solutions.',
         technologies: ['Engineer', 'Environmental', 'Logic', 'Laboratory'],
     },
 ];

@@ -1,4 +1,4 @@
-import { type Container, type ISourceOptions } from '@tsparticles/engine';
+import { type ISourceOptions } from '@tsparticles/engine';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import { useEffect, useMemo, useState } from 'react';
@@ -77,9 +77,7 @@ const HeroBackground = () => {
         []
     );
 
-    const particlesLoaded = async (container?: Container): Promise<void> => {
-        console.log(container);
-    };
+    const particlesLoaded = async (): Promise<void> => {};
     useEffect(() => {
         initParticlesEngine(async (engine) => {
             // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets

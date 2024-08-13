@@ -52,7 +52,7 @@ const Footer = () => {
 
                 <hr className="mt-3 w-full" />
 
-                <p className="opacity-50">
+                <p>
                     {year} - Build by{' '}
                     <a
                         rel="noreferrer"

@@ -1,13 +1,10 @@
 import resume from '@assets/Bao-Nguyen-Resume.pdf';
-import Button from '@components/button/Button';
 import { Close, Menu } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 import { navLinks } from '../../constants';
+import ButtonLink from '../button/ButtonLink';
 
 const Navbar = () => {
-    // TODO: Is Logo needed?
-    // TODO: Update the Resume
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -34,26 +31,26 @@ const Navbar = () => {
                 visible ? 'top-0' : '-top-full'
             }`}
         >
-            <ul
+            <div
                 className={`flex-2 hidden h-full items-center justify-center gap-10 md:flex`}
             >
                 {navLinks.map((link) => (
-                    <li
-                        className=" flex h-full flex-1 cursor-pointer  items-center justify-center  rounded-sm border-b-4 border-transparent border-opacity-0 text-lg font-bold hover:border-b-4 hover:border-primary"
+                    <ButtonLink
                         key={link.name}
-                    >
-                        <a href={link.path}>{link.name}</a>
-                    </li>
-                ))}
-                <a href={resume}>
-                    <Button
-                        className="text-lg font-bold text-white"
-                        text={'Resume'}
-                        onClick={() => {}}
+                        text={link.name}
+                        href={link.path}
+                        contained={false}
+                        variant="secondary"
+                        onClick={() => setIsMenuOpen(false)}
                     />
-                </a>
-            </ul>
-
+                ))}
+                <ButtonLink
+                    text={'Resume'}
+                    href={resume}
+                    onClick={() => setIsMenuOpen(false)}
+                    variant="secondary"
+                />
+            </div>
             {
                 <div className={'z-50 cursor-pointer md:hidden'}>
                     {isMenuOpen ? (
@@ -63,7 +60,6 @@ const Navbar = () => {
                     )}
                 </div>
             }
-
             {/* Navlink for mobile */}
             {
                 <div
@@ -74,36 +70,36 @@ const Navbar = () => {
                     }
           md:hidden`}
                 >
-                    <ul className={`flex flex-col justify-center gap-10 p-10`}>
+                    <div className={`flex flex-col justify-center gap-10 p-10`}>
                         {navLinks.map((link) => (
-                            <li
-                                className="cursor-pointer text-center text-xl font-bold text-white "
+                            <ButtonLink
                                 key={link.name}
-                            >
-                                <a
-                                    href={link.path}
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    {link.name}
-                                </a>
-                            </li>
-                        ))}
-                        <a href={resume}>
-                            <Button
-                                className="text-lg font-bold text-white"
-                                text={'Resume'}
-                                onClick={() => {}}
+                                text={link.name}
+                                href={link.path}
+                                contained={false}
+                                variant="secondary"
+                                onClick={() => setIsMenuOpen(false)}
                             />
-                        </a>
-                    </ul>
+                        ))}
+                        <ButtonLink
+                            text={'Resume'}
+                            href={resume}
+                            variant="secondary"
+                            onClick={() => setIsMenuOpen(false)}
+                        />
+                    </div>
                 </div>
             }
             {/* Backdrop */}
             <div
-                className={`backdrop-blur-1 z-1 pointer-events-none absolute left-0 top-0 h-screen w-screen backdrop-filter transition duration-500 ease-in  ${
-                    isMenuOpen ? 'bg-backdrop-color' : 'bg-transparent'
+                className={` absolute left-0 top-0 h-screen w-screen backdrop-filter transition duration-500 ease-in  ${
+                    isMenuOpen
+                        ? 'bg-backdrop-color'
+                        : 'pointer-events-none bg-transparent'
                 } md:hidden`}
+                onClick={() => setIsMenuOpen(false)}
             />
+            ,
         </nav>
     );
 };
